@@ -14,6 +14,7 @@ Export JMdict into JSON various files and SQLite.
 1. Run following command
 
     ```sh
+    npm install jmdict-util
     npx jmdict-util toJSON ./JMdict_e ./result
     ```
 
