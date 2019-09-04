@@ -8,7 +8,7 @@
     "test-db": "node ./test/test-db.js"
   },
   "author": "Ezzat Chamudi",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "sqlite3": "^4.1.0",
     "xml2json": "^0.11.2"
