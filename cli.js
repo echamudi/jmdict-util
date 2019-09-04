@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+'use strict';
 const { JMdictUtil, objectToJson } = require('./index');
 const fs = require('fs');
 
