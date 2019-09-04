@@ -1,0 +1,16 @@
+{
+  "name": "jmdict-util",
+  "version": "0.1.0",
+  "description": "Export JMdict to JSON and SQLite.",
+  "main": "index.js",
+  "scripts": {
+    "test-json": "node ./test/test-json.js",
+    "test-db": "node ./test/test-db.js"
+  },
+  "author": "Ezzat Chamudi",
+  "license": "ISC",
+  "dependencies": {
+    "sqlite3": "^4.1.0",
+    "xml2json": "^0.11.2"
+  }
+}

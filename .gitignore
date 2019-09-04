@@ -59,3 +59,11 @@ typings/
 
 # next.js build output
 .next
+
+# others
+input
+output
+test_temp_json
+test_temp_db
+dist
+JMdict_e
