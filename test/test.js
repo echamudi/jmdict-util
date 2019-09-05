@@ -23,7 +23,7 @@ const {
 
 const kanjiSamples = ['食べる', '高等学校', '果物', '飛行機', '今日', '東京', '根本', '根元'];
 Object.freeze(kanjiSamples);
-const readingSamples = ['たべる', 'こうとうがっこう', 'くだもの', 'ひこうき', 'きょう', 'とうきょう', 'こんぽん', 'こんげん', 'ねもと'];
+const readingSamples = ['たべる', 'こうとうがっこう', 'くだもの', 'ひこうき', 'きょう', 'とうきょう', 'こんぽん', 'こんげん', 'ねもと', 'じゃあ'];
 Object.freeze(readingSamples);
 
 // Test Suites
