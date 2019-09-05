@@ -1,6 +1,5 @@
 {
     "jshint.enable": false,
-    "eslint.enable": false,
+    "eslint.enable": true,
     "tslint.enable": true,
-    "javascript.implicitProjectConfig.checkJs": true
 }

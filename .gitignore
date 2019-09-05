@@ -63,7 +63,11 @@ typings/
 # others
 input
 output
+dist
+
+JMdict_e
+
 test_temp_json
 test_temp_db
-dist
-JMdict_e
+test_temp_cli_json
+test_temp_cli_db
