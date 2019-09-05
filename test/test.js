@@ -15,19 +15,21 @@ Object.freeze(readingSamples);
 
 describe('Testing jmdict-util', function() {
 
-    describe('API', function() {
-        it('has JMdictUtil', function () {
+    describe('JMdictUtil API', function() {
+        it('has JMdictUtil function', function () {
             assert.deepStrictEqual(typeof JMdictUtil, 'function');
-    
-            it('has all required methods', function () {
-                assert.deepStrictEqual(typeof JMdictUtil.prototype.getJMdictEntries, 'function');
-                assert.deepStrictEqual(typeof JMdictUtil.prototype.getKanjiIndex, 'function');
-                assert.deepStrictEqual(typeof JMdictUtil.prototype.getKanjiArray, 'function');
-                assert.deepStrictEqual(typeof JMdictUtil.prototype.getReadingIndex, 'function');
-                assert.deepStrictEqual(typeof JMdictUtil.prototype.getReadingArray, 'function');
-            });
         });
     
+        it('has all required methods', function () {
+            assert.deepStrictEqual(typeof JMdictUtil.prototype.getJMdictEntries, 'function');
+            assert.deepStrictEqual(typeof JMdictUtil.prototype.getKanjiIndex, 'function');
+            assert.deepStrictEqual(typeof JMdictUtil.prototype.getKanjiArray, 'function');
+            assert.deepStrictEqual(typeof JMdictUtil.prototype.getReadingIndex, 'function');
+            assert.deepStrictEqual(typeof JMdictUtil.prototype.getReadingArray, 'function');
+        });
+    })
+
+    describe('objectToJson API', function() {
         it('has objectToJson function', function () {
             assert.deepStrictEqual(typeof objectToJson, 'function');
         });
@@ -62,14 +64,17 @@ describe('Testing jmdict-util', function() {
             assert.deepStrictEqual(fs.existsSync(path + '/test_temp_json/ReadingIndex.json'), true);
         });
     
-        it('should have correct JSON files', function () {
-            this.slow(60000);
-            this.timeout(300000);
-    
+        it('should export JMdictEntries.json correctly', function() {
             let JMdictEntries = require(path + '/test_temp_json/JMdictEntries.json');
             assert.deepStrictEqual(Array.isArray(JMdictEntries), true);
-            JMdictEntries = null;
-    
+            for (let entry of JMdictEntries) {
+                assert.deepStrictEqual(Array.isArray(entry['ent_seq']), true);
+                assert.deepStrictEqual(Array.isArray(entry['r_ele']), true);
+                assert.deepStrictEqual(Array.isArray(entry['sense']), true);
+            }
+        });
+
+        it('should export KanjiArray.json correctly', function() {
             let KanjiArray = require(path + '/test_temp_json/KanjiArray.json');
             assert.deepStrictEqual(Array.isArray(KanjiArray), true);
             for (let kanjiSample of kanjiSamples) {
@@ -78,8 +83,9 @@ describe('Testing jmdict-util', function() {
             for (let readingSample of readingSamples) {
                 assert.deepStrictEqual(KanjiArray.includes(readingSample), false);
             }
-            KanjiArray = null;
-    
+        });
+
+        it('should export KanjiIndex.json correctly', function() {
             let KanjiIndex = require(path + '/test_temp_json/KanjiIndex.json');
             assert.deepStrictEqual(KanjiIndex === Object(KanjiIndex), true);
             for (let kanjiSample of kanjiSamples) {
@@ -89,8 +95,9 @@ describe('Testing jmdict-util', function() {
             for (let readingSample of readingSamples) {
                 assert.deepStrictEqual(KanjiIndex[readingSample], undefined);
             }
-            KanjiIndex = null;
-    
+        });
+
+        it('should export ReadingArray.json correctly', function() {
             let ReadingArray = require(path + '/test_temp_json/ReadingArray.json');
             assert.deepStrictEqual(Array.isArray(ReadingArray), true);
             for (let readingSample of readingSamples) {
@@ -99,8 +106,9 @@ describe('Testing jmdict-util', function() {
             for (let kanjiSample of kanjiSamples) {
                 assert.deepStrictEqual(ReadingArray.includes(kanjiSample), false);
             }
-            ReadingArray = null;
-    
+        });
+
+        it('should export ReadingArray.json correctly', function() {
             let ReadingIndex = require(path + '/test_temp_json/ReadingIndex.json');
             assert.deepStrictEqual(ReadingIndex === Object(ReadingIndex), true);
             for (let readingSample of readingSamples) {
@@ -110,11 +118,10 @@ describe('Testing jmdict-util', function() {
             for (let kanjiSample of kanjiSamples) {
                 assert.deepStrictEqual(ReadingIndex[kanjiSample], undefined);
             }
-            ReadingIndex = null;
         });
-    
-        after(function() {
-            console.log('(Please delete ./test_temp_json folder)');
-        });
+    });
+
+    after(function() {
+        console.log('(Please delete ./test_temp_json folder.)');
     });
 });
