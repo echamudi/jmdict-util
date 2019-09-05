@@ -1,6 +1,6 @@
 # JMdict Util
 
-[![Build Status](https://travis-ci.org/ezhmd/jmdict-util.svg?branch=master)](https://travis-ci.org/ezhmd/jmdict-util)
+[![Build Status](https://travis-ci.org/ezhmd/jmdict-util.svg?branch=master)](https://travis-ci.org/ezhmd/jmdict-util) [![NPM Downloads](https://img.shields.io/npm/dm/jmdict-util?label=downloads)](https://www.npmjs.com/package/jmdict-util)
 
 Export JMdict into JSON various files and SQLite.
 
@@ -24,6 +24,13 @@ Export JMdict into JSON various files and SQLite.
 1. Your JSON files are ready!
 
 ## Development
+
+## Build Status
+
+| Branch | asdad |
+| - | - |
+| master | [![Build Status](https://travis-ci.org/ezhmd/jmdict-util.svg?branch=master)](https://travis-ci.org/ezhmd/jmdict-util) |
+| develop | [![Build Status](https://travis-ci.org/ezhmd/jmdict-util.svg?branch=develop)](https://travis-ci.org/ezhmd/jmdict-util) |
 
 ## Testing
 
