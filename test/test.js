@@ -19,10 +19,14 @@ const {
   objectToJson,
 } = require('../index');
 
+// Fixtures
+
 const kanjiSamples = ['食べる', '高等学校', '果物', '飛行機', '今日', '東京', '根本', '根元'];
 Object.freeze(kanjiSamples);
 const readingSamples = ['たべる', 'こうとうがっこう', 'くだもの', 'ひこうき', 'きょう', 'とうきょう', 'こんぽん', 'こんげん', 'ねもと'];
 Object.freeze(readingSamples);
+
+// Test Suites
 
 describe('Testing jmdict-util', function () {
   describe('JMdictUtil API', function () {
@@ -72,9 +76,11 @@ describe('Testing jmdict-util', function () {
       assert.deepStrictEqual(fs.existsSync(`${path}/test_temp_json/ReadingArray.json`), true);
       assert.deepStrictEqual(fs.existsSync(`${path}/test_temp_json/ReadingIndex.json`), true);
     });
+  });
 
+  function jsonValidityCheck(/** @type {string} */ jsonFolder) {
     it('should export JMdictEntries.json correctly', function () {
-      const JMdictEntries = JSON.parse(fs.readFileSync(`${path}/test_temp_json/JMdictEntries.json`, 'utf8'));
+      const JMdictEntries = JSON.parse(fs.readFileSync(`${jsonFolder}/JMdictEntries.json`, 'utf8'));
       assert.deepStrictEqual(Array.isArray(JMdictEntries), true);
 
       JMdictEntries.forEach((/** @type {Object} */ entry) => {
@@ -85,7 +91,7 @@ describe('Testing jmdict-util', function () {
     });
 
     it('should export KanjiArray.json correctly', function () {
-      const KanjiArray = JSON.parse(fs.readFileSync(`${path}/test_temp_json/KanjiArray.json`, 'utf8'));
+      const KanjiArray = JSON.parse(fs.readFileSync(`${jsonFolder}/KanjiArray.json`, 'utf8'));
       assert.deepStrictEqual(Array.isArray(KanjiArray), true);
 
       kanjiSamples.forEach((/** @type {string} */ kanjiSample) => {
@@ -98,7 +104,7 @@ describe('Testing jmdict-util', function () {
     });
 
     it('should export KanjiIndex.json correctly', function () {
-      const KanjiIndex = JSON.parse(fs.readFileSync(`${path}/test_temp_json/KanjiIndex.json`, 'utf8'));
+      const KanjiIndex = JSON.parse(fs.readFileSync(`${jsonFolder}/KanjiIndex.json`, 'utf8'));
       assert.deepStrictEqual(KanjiIndex === Object(KanjiIndex), true);
 
       kanjiSamples.forEach((/** @type {string} */ kanjiSample) => {
@@ -112,7 +118,7 @@ describe('Testing jmdict-util', function () {
     });
 
     it('should export ReadingArray.json correctly', function () {
-      const ReadingArray = JSON.parse(fs.readFileSync(`${path}/test_temp_json/ReadingArray.json`, 'utf8'));
+      const ReadingArray = JSON.parse(fs.readFileSync(`${jsonFolder}/ReadingArray.json`, 'utf8'));
       assert.deepStrictEqual(Array.isArray(ReadingArray), true);
 
       readingSamples.forEach((/** @type {string} */ readingSample) => {
@@ -125,7 +131,7 @@ describe('Testing jmdict-util', function () {
     });
 
     it('should export ReadingArray.json correctly', function () {
-      const ReadingIndex = JSON.parse(fs.readFileSync(`${path}/test_temp_json/ReadingIndex.json`, 'utf8'));
+      const ReadingIndex = JSON.parse(fs.readFileSync(`${jsonFolder}/ReadingIndex.json`, 'utf8'));
       assert.deepStrictEqual(ReadingIndex === Object(ReadingIndex), true);
 
       readingSamples.forEach((/** @type {string} */ readingSample) => {
@@ -137,9 +143,18 @@ describe('Testing jmdict-util', function () {
         assert.deepStrictEqual(ReadingIndex[kanjiSample], undefined);
       });
     });
+  }
+
+
+  describe('JSON files validity', function () {
+    jsonValidityCheck(`${path}/test_temp_json`);
+  });
+
+  describe('JSON files validity (from cli)', function () {
+    jsonValidityCheck(`${path}/test_temp_cli_json`);
   });
 
   after(function () {
-    console.log('(Please delete ./test_temp_json folder.)');
+    console.log('(Please delete all ./test_temp_* folders.)');
   });
 });

@@ -65,5 +65,7 @@ input
 output
 test_temp_json
 test_temp_db
+test_temp_cli_json
+test_temp_cli_db
 dist
 JMdict_e
