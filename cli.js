@@ -45,8 +45,10 @@ if (!fs.existsSync(destination)) fs.mkdirSync(destination);
 const jmdict = new JMdictUtil(source);
 
 // Exporting JSON
-objectToJson(jmdict.getJMdictEntries(), `${destination}/JMdictEntries.json`);
-objectToJson(jmdict.getKanjiArray(), `${destination}/KanjiArray.json`);
-objectToJson(jmdict.getKanjiIndex(), `${destination}/KanjiIndex.json`);
-objectToJson(jmdict.getReadingArray(), `${destination}/ReadingArray.json`);
-objectToJson(jmdict.getReadingIndex(), `${destination}/ReadingIndex.json`);
+if (mode === 'toJSON') {
+  objectToJson(jmdict.getJMdictEntries(), `${destination}/JMdictEntries.json`);
+  objectToJson(jmdict.getKanjiArray(), `${destination}/KanjiArray.json`);
+  objectToJson(jmdict.getKanjiIndex(), `${destination}/KanjiIndex.json`);
+  objectToJson(jmdict.getReadingArray(), `${destination}/ReadingArray.json`);
+  objectToJson(jmdict.getReadingIndex(), `${destination}/ReadingIndex.json`);
+}
