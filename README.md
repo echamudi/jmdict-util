@@ -27,7 +27,7 @@ Export JMdict into JSON various files and SQLite.
 
 ## Build Status
 
-| Branch | asdad |
+| Branch | Status |
 | - | - |
 | master | [![Build Status](https://travis-ci.org/ezhmd/jmdict-util.svg?branch=master)](https://travis-ci.org/ezhmd/jmdict-util) |
 | develop | [![Build Status](https://travis-ci.org/ezhmd/jmdict-util.svg?branch=develop)](https://travis-ci.org/ezhmd/jmdict-util) |
