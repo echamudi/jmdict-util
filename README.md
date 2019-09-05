@@ -35,7 +35,6 @@ Export JMdict into JSON various files and SQLite.
 ## Testing
 
 ```sh
-npx . toJSON ./test/fixtures/JMdict_e_test ./test_temp_cli_json
 npm test
 ```
 

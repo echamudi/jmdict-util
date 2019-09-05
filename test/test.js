@@ -8,6 +8,7 @@ const path = process.cwd();
 const fs = require('fs');
 const console = require('console');
 const assert = require('assert');
+const { execSync } = require('child_process');
 const {
   describe,
   it,
@@ -151,6 +152,7 @@ describe('Testing jmdict-util', function () {
   });
 
   describe('JSON files validity (from cli)', function () {
+    execSync('npx . toJSON ./test/fixtures/JMdict_e_test ./test_temp_cli_json');
     jsonValidityCheck(`${path}/test_temp_cli_json`);
   });
 

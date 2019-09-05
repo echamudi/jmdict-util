@@ -13,5 +13,4 @@ install:
   - npm install
 
 script:
-  - npx . toJSON ./test/fixtures/JMdict_e_test ./test_temp_cli_json
   - npm test
