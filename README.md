@@ -1,9 +1,12 @@
 # JMdict Util
 
-Export JMdict into JSON various files and SQLite.
-(The SQLite exporting feature is currently under heavy development and unstable)
+[![Build Status](https://travis-ci.org/ezhmd/jmdict-util.svg?branch=master)](https://travis-ci.org/ezhmd/jmdict-util)
 
-## How to Use
+Export JMdict into JSON various files and SQLite.
+
+(The SQLite exporting feature is currently under heavy development)
+
+## Usage
 
 1. Download [JMdict_e.gz](http://www.edrdg.org/jmdict/edict_doc.html).
 
@@ -24,8 +27,6 @@ Export JMdict into JSON various files and SQLite.
 
 ## Testing
 
-Put `JMdict_e` inside `./input` folder. And then, run:
-
 ```sh
-npm run test-json
+npm test
 ```
