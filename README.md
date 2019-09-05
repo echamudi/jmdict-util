@@ -30,3 +30,15 @@ Export JMdict into JSON various files and SQLite.
 ```sh
 npm test
 ```
+
+## Authors
+
+* **Ezzat Chamudi** - [ezhmd](https://github.com/ezhmd)
+
+## Licenses
+
+JMdict Util code is released under [MIT](https://opensource.org/licenses/MIT). 
+
+JMdict is available under Creative Commons Attribution-ShareAlike Licence (V3.0). [License Details](http://www.edrdg.org/edrdg/licence.html)
+
+Libraries, dependencies, and tools used in this project are tied with their own licenses respectively.
