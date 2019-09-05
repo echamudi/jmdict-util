@@ -4,8 +4,7 @@
   "description": "Export JMdict to JSON and SQLite.",
   "main": "index.js",
   "scripts": {
-    "test-json": "node ./test/test-json.js",
-    "test-db": "node ./test/test-db.js"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -17,5 +16,8 @@
   "dependencies": {
     "sqlite3": "^4.1.0",
     "xml2json": "^0.11.2"
+  },
+  "devDependencies": {
+    "mocha": "^6.2.0"
   }
 }
