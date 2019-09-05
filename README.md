@@ -4,7 +4,7 @@
 
 Export JMdict into JSON various files and SQLite.
 
-(The SQLite exporting feature is currently under heavy development)
+(The SQLite exporting feature is currently under development and not available)
 
 ## Usage
 
