@@ -829,4 +829,204 @@ various information fields.
 <gloss>to admire</gloss>
 </sense>
 </entry>
+<entry>
+<ent_seq>1000320</ent_seq>
+<k_ele>
+<keb>彼処</keb>
+<ke_pri>ichi1</ke_pri>
+</k_ele>
+<k_ele>
+<keb>彼所</keb>
+</k_ele>
+<r_ele>
+<reb>あそこ</reb>
+<re_pri>ichi1</re_pri>
+</r_ele>
+<r_ele>
+<reb>あすこ</reb>
+</r_ele>
+<r_ele>
+<reb>かしこ</reb>
+</r_ele>
+<r_ele>
+<reb>アソコ</reb>
+<re_nokanji/>
+</r_ele>
+<r_ele>
+<reb>あしこ</reb>
+<re_inf>&ok;</re_inf>
+</r_ele>
+<r_ele>
+<reb>あこ</reb>
+<re_inf>&ok;</re_inf>
+</r_ele>
+<sense>
+<pos>&pn;</pos>
+<xref>どこ・1</xref>
+<xref>ここ・1</xref>
+<xref>そこ・1</xref>
+<misc>&uk;</misc>
+<gloss>there (place physically distant from both speaker and listener)</gloss>
+<gloss>over there</gloss>
+<gloss>that place</gloss>
+<gloss>yonder</gloss>
+<gloss>you-know-where</gloss>
+</sense>
+<sense>
+<stagr>あそこ</stagr>
+<stagr>あすこ</stagr>
+<stagr>アソコ</stagr>
+<pos>&n;</pos>
+<misc>&col;</misc>
+<misc>&uk;</misc>
+<gloss>genitals</gloss>
+<gloss>private parts</gloss>
+<gloss>nether regions</gloss>
+</sense>
+<sense>
+<xref>あれほど</xref>
+<misc>&uk;</misc>
+<gloss>that far (something psychologically distant from both speaker and listener)</gloss>
+<gloss>that much</gloss>
+<gloss>that point</gloss>
+</sense>
+</entry>
+<entry>
+<ent_seq>1000480</ent_seq>
+<k_ele>
+<keb>阿呆陀羅</keb>
+</k_ele>
+<r_ele>
+<reb>あほんだら</reb>
+</r_ele>
+<r_ele>
+<reb>あほだら</reb>
+</r_ele>
+<sense>
+<pos>&n;</pos>
+<misc>&uk;</misc>
+<dial>&ksb;</dial>
+<gloss>fool</gloss>
+<gloss>oaf</gloss>
+<gloss>airhead</gloss>
+</sense>
+<sense>
+<stagr>あほだら</stagr>
+<xref>あほだら経</xref>
+<misc>&abbr;</misc>
+<gloss g_type="expl">type of fast-paced humorous singing mimicking the chanting of a Buddhist sutra, usually with lyrics satirizing current events</gloss>
+</sense>
+</entry>
+<entry>
+<ent_seq>1682560</ent_seq>
+<k_ele>
+<keb>金輪</keb>
+</k_ele>
+<k_ele>
+<keb>鉄輪</keb>
+</k_ele>
+<r_ele>
+<reb>かなわ</reb>
+</r_ele>
+<r_ele>
+<reb>てつりん</reb>
+<re_restr>鉄輪</re_restr>
+</r_ele>
+<sense>
+<pos>&n;</pos>
+<gloss>metal ring</gloss>
+<gloss>metal hoop</gloss>
+<gloss>metal band</gloss>
+</sense>
+<sense>
+<stagr>かなわ</stagr>
+<gloss>trivet</gloss>
+</sense>
+<sense>
+<stagr>てつりん</stagr>
+<gloss>train wheel</gloss>
+<gloss>train</gloss>
+</sense>
+</entry>
+<entry>
+<ent_seq>1690510</ent_seq>
+<k_ele>
+<keb>薄物</keb>
+</k_ele>
+<k_ele>
+<keb>羅</keb>
+</k_ele>
+<r_ele>
+<reb>うすもの</reb>
+</r_ele>
+<r_ele>
+<reb>ら</reb>
+<re_restr>羅</re_restr>
+</r_ele>
+<sense>
+<pos>&n;</pos>
+<gloss>lightweight fabric or clothing</gloss>
+<gloss>silk gauze</gloss>
+<gloss>thin silk</gloss>
+</sense>
+<sense>
+<stagr>ら</stagr>
+<xref>羅甸語</xref>
+<misc>&abbr;</misc>
+<gloss>Latin (language)</gloss>
+</sense>
+</entry>
+<entry>
+<ent_seq>1690520</ent_seq>
+<k_ele>
+<keb>薄茶</keb>
+</k_ele>
+<r_ele>
+<reb>うすちゃ</reb>
+</r_ele>
+<sense>
+<pos>&n;</pos>
+<pos>&adj-no;</pos>
+<xref>抹茶</xref>
+<gloss>weak matcha</gloss>
+</sense>
+<sense>
+<gloss>light brown (color, colour)</gloss>
+</sense>
+</entry>
+<entry>
+<ent_seq>2433270</ent_seq>
+<r_ele>
+<reb>すかり</reb>
+</r_ele>
+<r_ele>
+<reb>すがり</reb>
+</r_ele>
+<sense>
+<pos>&n;</pos>
+<gloss>net for caught fish</gloss>
+</sense>
+<sense>
+<gloss>net-like tassel of Buddhist prayer beads</gloss>
+</sense>
+<sense>
+<stagr>すがり</stagr>
+<xref>黒雀蜂</xref>
+<dial>&thb;</dial>
+<gloss>Vespula flaviceps (species of yellowjacket)</gloss>
+</sense>
+<sense>
+<stagr>すがり</stagr>
+<xref>蟻</xref>
+<dial>&kyu;</dial>
+<gloss>ant</gloss>
+</sense>
+<sense>
+<stagr>すかり</stagr>
+<pos>&adv;</pos>
+<pos>&adv-to;</pos>
+<misc>&on-mim;</misc>
+<gloss>easily</gloss>
+</sense>
+</entry>
 </JMdict>
