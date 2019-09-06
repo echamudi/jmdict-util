@@ -691,4 +691,142 @@ various information fields.
 <gloss>plain copula</gloss>
 </sense>
 </entry>
+<entry>
+<ent_seq>1010230</ent_seq>
+<k_ele>
+<keb>半片</keb>
+</k_ele>
+<k_ele>
+<keb>半平</keb>
+</k_ele>
+<r_ele>
+<reb>はんぺん</reb>
+</r_ele>
+<r_ele>
+<reb>はんぺい</reb>
+<re_restr>半平</re_restr>
+</r_ele>
+<sense>
+<pos>&n;</pos>
+<misc>&uk;</misc>
+<gloss>pounded fish cake</gloss>
+</sense>
+<sense>
+<stagk>半片</stagk>
+<gloss>half a slice</gloss>
+<gloss>half a ticket</gloss>
+<gloss>ticket stub</gloss>
+</sense>
+</entry>
+<entry>
+<ent_seq>1115100</ent_seq>
+<r_ele>
+<reb>ブンド</reb>
+<re_pri>gai1</re_pri>
+</r_ele>
+<sense>
+<pos>&n;</pos>
+<lsource xml:lang="ger">Bund</lsource>
+<gloss>bond</gloss>
+</sense>
+</entry>
+<entry>
+<ent_seq>1115120</ent_seq>
+<k_ele>
+<keb>プー太郎</keb>
+</k_ele>
+<k_ele>
+<keb>ぷー太郎</keb>
+</k_ele>
+<k_ele>
+<keb>風太郎</keb>
+</k_ele>
+<r_ele>
+<reb>ぷうたろう</reb>
+<re_restr>風太郎</re_restr>
+</r_ele>
+<r_ele>
+<reb>プーたろう</reb>
+<re_restr>プー太郎</re_restr>
+</r_ele>
+<r_ele>
+<reb>ふうたろう</reb>
+<re_restr>風太郎</re_restr>
+</r_ele>
+<r_ele>
+<reb>ぷーたろう</reb>
+<re_restr>ぷー太郎</re_restr>
+</r_ele>
+<r_ele>
+<reb>プータロー</reb>
+<re_nokanji/>
+<re_pri>spec1</re_pri>
+</r_ele>
+<sense>
+<pos>&n;</pos>
+<pos>&vs;</pos>
+<misc>&col;</misc>
+<gloss>unemployed person</gloss>
+</sense>
+<sense>
+<misc>&col;</misc>
+<gloss>vagabond</gloss>
+<gloss>floater</gloss>
+<gloss>vagrant</gloss>
+</sense>
+<sense>
+<stagk>風太郎</stagk>
+<pos>&n;</pos>
+<gloss>day labourer, esp. on the docks</gloss>
+</sense>
+</entry>
+<entry>
+<ent_seq>1115130</ent_seq>
+<r_ele>
+<reb>プードル</reb>
+</r_ele>
+<sense>
+<pos>&n;</pos>
+<lsource xml:lang="fre">poudre</lsource>
+<gloss>powder</gloss>
+</sense>
+<sense>
+<gloss>poodle</gloss>
+</sense>
+</entry>
+<entry>
+<ent_seq>1150140</ent_seq>
+<k_ele>
+<keb>哀れむ</keb>
+<ke_pri>ichi1</ke_pri>
+</k_ele>
+<k_ele>
+<keb>憐れむ</keb>
+</k_ele>
+<k_ele>
+<keb>閔れむ</keb>
+<ke_inf>&oK;</ke_inf>
+</k_ele>
+<r_ele>
+<reb>あわれむ</reb>
+<re_pri>ichi1</re_pri>
+</r_ele>
+<sense>
+<pos>&v5m;</pos>
+<pos>&vt;</pos>
+<gloss>to pity</gloss>
+<gloss>to feel sympathy for</gloss>
+<gloss>to sympathize with</gloss>
+<gloss>to sympathise with</gloss>
+<gloss>to commiserate with</gloss>
+<gloss>to have mercy on</gloss>
+</sense>
+<sense>
+<stagk>哀れむ</stagk>
+<misc>&arch;</misc>
+<gloss>to enjoy the beauty of</gloss>
+<gloss>to appreciate</gloss>
+<gloss>to admire</gloss>
+</sense>
+</entry>
 </JMdict>
