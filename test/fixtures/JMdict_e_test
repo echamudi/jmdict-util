@@ -898,6 +898,33 @@ various information fields.
 </sense>
 </entry>
 <entry>
+<ent_seq>1640370</ent_seq>
+<k_ele>
+<keb>首になる</keb>
+</k_ele>
+<k_ele>
+<keb>首に成る</keb>
+</k_ele>
+<r_ele>
+<reb>くびになる</reb>
+</r_ele>
+<r_ele>
+<reb>クビになる</reb>
+<re_nokanji/>
+</r_ele>
+<sense>
+<pos>&exp;</pos>
+<pos>&v5r;</pos>
+<misc>&uk;</misc>
+<gloss>to be sacked</gloss>
+<gloss>to be fired</gloss>
+<gloss>to be dismissed</gloss>
+</sense>
+<sense>
+<gloss>to be beheaded</gloss>
+</sense>
+</entry>
+<entry>
 <ent_seq>1682560</ent_seq>
 <k_ele>
 <keb>金輪</keb>
@@ -1096,6 +1123,34 @@ various information fields.
 </sense>
 </entry>
 <entry>
+<ent_seq>1715460</ent_seq>
+<k_ele>
+<keb>からし菜</keb>
+</k_ele>
+<k_ele>
+<keb>芥子菜</keb>
+</k_ele>
+<k_ele>
+<keb>芥菜</keb>
+</k_ele>
+<r_ele>
+<reb>からしな</reb>
+</r_ele>
+<r_ele>
+<reb>カラシナ</reb>
+<re_nokanji/>
+</r_ele>
+<sense>
+<pos>&n;</pos>
+<misc>&uk;</misc>
+<gloss>Indian mustard (Brassica juncea)</gloss>
+<gloss>Chinese mustard</gloss>
+<gloss>leaf mustard</gloss>
+<gloss>brown mustard</gloss>
+<gloss>mustard greens</gloss>
+</sense>
+</entry>
+<entry>
 <ent_seq>2425140</ent_seq>
 <k_ele>
 <keb>根本</keb>
@@ -1148,6 +1203,26 @@ various information fields.
 <pos>&adv-to;</pos>
 <misc>&on-mim;</misc>
 <gloss>easily</gloss>
+</sense>
+</entry>
+<entry>
+<ent_seq>2810430</ent_seq>
+<k_ele>
+<keb>背黒海蛇</keb>
+</k_ele>
+<r_ele>
+<reb>せぐろうみへび</reb>
+</r_ele>
+<r_ele>
+<reb>セグロウミヘビ</reb>
+<re_nokanji/>
+</r_ele>
+<sense>
+<pos>&n;</pos>
+<misc>&uk;</misc>
+<gloss>yellow-bellied sea snake (Pelamis platura)</gloss>
+<gloss>yellowbelly sea snake</gloss>
+<gloss>pelagic sea snake</gloss>
 </sense>
 </entry>
 </JMdict>
