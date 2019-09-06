@@ -216,6 +216,10 @@ declare namespace JMdict {
      * sense elements will be employed.
      */
     interface sense {
+        /**
+         * These elements, if present, indicate that the sense is restricted
+         * to the lexeme represented by the keb and/or reb.
+         */
         stagk?: string[],
 
         /**
