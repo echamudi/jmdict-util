@@ -29,6 +29,9 @@ describe('DB exporting features', function () {
   });
 
   it('exports DB', async function () {
+    this.timeout(3600000);
+
+    // const jmdict = new JMdictUtil(`${path}/JMdict_e`);
     const jmdict = new JMdictUtil(`${path}/test/fixtures/JMdict_e_test`);
 
     await jmdict.buildSqlite('./test_temp/db/db.db');
