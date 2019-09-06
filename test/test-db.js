@@ -17,18 +17,20 @@ const {
   // objectToJson,
 } = require('../index');
 
+if (!fs.existsSync(`${path}/test_temp`)) fs.mkdirSync(`${path}/test_temp`);
+
 describe('DB exporting features', function () {
-  before('creating test_temp_db folder', function () {
-    if (fs.existsSync(`${path}/test_temp_db`)) {
-      throw new Error('test_temp_db folder exists, please delete and rerun the test.');
+  before('creating db folder', function () {
+    if (fs.existsSync(`${path}/test_temp/db`)) {
+      throw new Error('db folder exists, please delete and rerun the test.');
     } else {
-      fs.mkdirSync(`${path}/test_temp_db`);
+      fs.mkdirSync(`${path}/test_temp/db`);
     }
   });
 
   it('exports DB', async function () {
     const jmdict = new JMdictUtil(`${path}/test/fixtures/JMdict_e_test`);
 
-    await jmdict.buildSqlite('./test_temp_db/db.db');
+    await jmdict.buildSqlite('./test_temp/db/db.db');
   });
 });

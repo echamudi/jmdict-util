@@ -67,6 +67,7 @@ dist
 
 JMdict_e
 
+test_temp
 test_temp_json
 test_temp_db
 test_temp_cli_json
