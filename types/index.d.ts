@@ -1,3 +1,11 @@
+interface JMdict {
+    JMdict: [
+        {
+            entry: entry[]
+        }
+    ]
+}
+
 interface entry {
     ent_seq: [number];
     k_ele?: k_ele[];
