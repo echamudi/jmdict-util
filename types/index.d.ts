@@ -7,6 +7,13 @@ declare namespace JMdict {
     interface JMdict {
         JMdict: [
             {
+                /**
+                 * Array of entry
+                 * 
+                 * Entries consist of kanji elements, reading elements, 
+                 * general information and sense elements. Each entry must have at 
+                 * least one reading element and one sense element. Others are optional.
+                 */
                 entry: entry[]
             }
         ]
@@ -22,8 +29,43 @@ declare namespace JMdict {
          * A unique numeric sequence number for each entry
          */
         ent_seq: [number];
+
+        /**
+         * Array of k_ele
+         *
+         * The kanji element, or in its absence, the reading element, is 
+         * the defining component of each entry.
+         * The overwhelming majority of entries will have a single kanji
+         * element associated with a word in Japanese. Where there are 
+         * multiple kanji elements within an entry, they will be orthographical
+         * variants of the same word, either using variations in okurigana, or
+         * alternative and equivalent kanji. Common "mis-spellings" may be 
+         * included, provided they are associated with appropriate information
+         * fields. Synonyms are not included; they may be indicated in the
+         * cross-reference field associated with the sense element.
+         */
         k_ele?: k_ele[];
+
+        /**
+         * Array of r_ele
+         *
+         * The reading element typically contains the valid readings
+         * of the word(s) in the kanji element using modern kanadzukai. 
+         * Where there are multiple reading elements, they will typically be
+         * alternative readings of the kanji element. In the absence of a 
+         * kanji element, i.e. in the case of a word or phrase written
+         * entirely in kana, these elements will define the entry.
+         */
         r_ele: r_ele[];
+
+        /**
+         * Array of sense
+         * 
+         * The sense element will record the translational equivalent
+         * of the Japanese word, plus other related information. Where there
+         * are several distinctly different meanings of the word, multiple
+         * sense elements will be employed.
+         */
         sense: sense[];
     }
 
@@ -174,11 +216,12 @@ declare namespace JMdict {
      * sense elements will be employed.
      */
     interface sense {
+        stagk?: string[],
+
         /**
          * These elements, if present, indicate that the sense is restricted
          * to the lexeme represented by the keb and/or reb.
          */
-        stagk?: string[],
         stagr?: string[],
 
         /**
@@ -229,6 +272,14 @@ declare namespace JMdict {
          */
         s_inf?: string[],
 
+        /**
+         * Array of lsource
+         * 
+         * This element records the information about the source
+         * language(s) of a loan-word/gairaigo. If the source language is other 
+         * than English, the language is indicated by the xml:lang attribute.
+         * The element value (if any) is the source word or phrase.
+         */
         lsource?: lsource[],
 
         /**
@@ -236,6 +287,15 @@ declare namespace JMdict {
          * Japanese, the entity code for that dialect, e.g. ksb for Kansaiben.
          */
         dial?: string[],
+
+        /**
+         * Array of gloss
+         * 
+         * Within each sense will be one or more "glosses", i.e. 
+         * target-language words or phrases which are equivalents to the 
+         * Japanese word. This element would normally be present, however it 
+         * may be omitted in entries which are purely for a cross-reference.
+         */
         gloss?: gloss[],
     }
 
@@ -269,6 +329,10 @@ declare namespace JMdict {
          * indicate "waseieigo".
          */
         ls_wasei?: "y",
+
+        /**
+         * lsource text content
+         */
         $t?: string
     }
 
@@ -300,6 +364,9 @@ declare namespace JMdict {
          */
         g_type?: string,
 
+        /**
+         * gloss text content
+         */
         $t?: string
     }
 }
