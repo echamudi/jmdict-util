@@ -1,6 +1,8 @@
 /* eslint-disable func-names */
 /* eslint-disable prefer-arrow-callback */
 
+// npx mocha ./test/test-db.js
+
 const path = process.cwd();
 const fs = require('fs');
 // const console = require('console');
