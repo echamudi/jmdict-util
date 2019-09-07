@@ -10,7 +10,7 @@ os:
   - windows
 
 install:
-  - npm install
+  - npm install --only=prod
 
 script:
   - npm test
