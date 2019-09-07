@@ -10,8 +10,7 @@ os:
   - windows
 
 install:
-  - npm install --only=prod
-  - npm install -g mocha@^6.2.0
+  - npm install
 
 script:
-  - mocha ./test/test.js
+  - npm test
