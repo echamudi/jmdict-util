@@ -99,7 +99,7 @@ describe('Testing jmdict-util', function () {
       });
     });
 
-    it('should export ReadingArray.json correctly', function () {
+    it('should export ReadingIndex.json correctly', function () {
       const ReadingIndex = JSON.parse(fs.readFileSync(`${jsonFolder}/ReadingIndex.json`, 'utf8'));
       assert.deepStrictEqual(ReadingIndex === Object(ReadingIndex), true);
 
