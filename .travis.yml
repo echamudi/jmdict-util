@@ -11,6 +11,7 @@ os:
 
 install:
   - npm install --only=prod
+  - npm install -g mocha@^6.2.0
 
 script:
   - npm test
