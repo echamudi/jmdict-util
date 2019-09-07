@@ -1,3 +1,4 @@
+/* eslint-env node, mocha */
 /* eslint-disable func-names */
 /* eslint-disable prefer-arrow-callback */
 
@@ -9,12 +10,6 @@ const fs = require('fs');
 const console = require('console');
 const assert = require('assert');
 const { execSync } = require('child_process');
-const {
-  describe,
-  it,
-  before,
-  after,
-} = require('mocha');
 const {
   JMdictUtil,
   objectToJson,
