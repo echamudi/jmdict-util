@@ -10,8 +10,8 @@ os:
   - windows
 
 install:
-  - npm install
+  - npm install --only=prod
+  - npm install -g mocha
 
 script:
-  - npx . toJSON ./test/fixtures/JMdict_e_test ./test_temp_cli_json
   - npm test

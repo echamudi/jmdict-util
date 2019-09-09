@@ -4,8 +4,10 @@
         "target": "es6",
         "noImplicitAny": true
     },
-    "exclude": [
-        "node_modules",
-        "**/node_modules/*"
-    ]
+    "include": [
+        "lib/**/*.js",
+        "test/**/*.js",
+        "types/**/*.ts",
+        "index.js"
+    ],
 }

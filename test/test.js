@@ -1,3 +1,4 @@
+/* eslint-env node, mocha */
 /* eslint-disable func-names */
 /* eslint-disable prefer-arrow-callback */
 
@@ -8,22 +9,19 @@ const path = process.cwd();
 const fs = require('fs');
 const console = require('console');
 const assert = require('assert');
-const {
-  describe,
-  it,
-  before,
-  after,
-} = require('mocha');
+const { execSync } = require('child_process');
 const {
   JMdictUtil,
   objectToJson,
 } = require('../index');
 
+if (!fs.existsSync(`${path}/test_temp`)) fs.mkdirSync(`${path}/test_temp`);
+
 // Fixtures
 
 const kanjiSamples = ['食べる', '高等学校', '果物', '飛行機', '今日', '東京', '根本', '根元'];
 Object.freeze(kanjiSamples);
-const readingSamples = ['たべる', 'こうとうがっこう', 'くだもの', 'ひこうき', 'きょう', 'とうきょう', 'こんぽん', 'こんげん', 'ねもと'];
+const readingSamples = ['たべる', 'こうとうがっこう', 'くだもの', 'ひこうき', 'きょう', 'とうきょう', 'こんぽん', 'こんげん', 'ねもと', 'じゃあ'];
 Object.freeze(readingSamples);
 
 // Test Suites
@@ -36,6 +34,7 @@ describe('Testing jmdict-util', function () {
 
     it('has all required methods', function () {
       assert.deepStrictEqual(typeof JMdictUtil.prototype.getJMdictEntries, 'function');
+      assert.deepStrictEqual(typeof JMdictUtil.prototype.getEntityDefinitions, 'function');
       assert.deepStrictEqual(typeof JMdictUtil.prototype.getKanjiIndex, 'function');
       assert.deepStrictEqual(typeof JMdictUtil.prototype.getKanjiArray, 'function');
       assert.deepStrictEqual(typeof JMdictUtil.prototype.getReadingIndex, 'function');
@@ -49,36 +48,7 @@ describe('Testing jmdict-util', function () {
     });
   });
 
-  describe('JSON exporting features', function () {
-    before('creating test_temp_json folder', function () {
-      if (fs.existsSync(`${path}/test_temp_json`)) {
-        throw new Error('test_temp_json folder exists, please delete and rerun the test.');
-      } else {
-        fs.mkdirSync(`${path}/test_temp_json`);
-      }
-    });
-
-    it('exports JSON files', function () {
-      this.slow(60000);
-      this.timeout(300000);
-
-      const jmdict = new JMdictUtil(`${path}/test/fixtures/JMdict_e_test`);
-
-      objectToJson(jmdict.getJMdictEntries(), `${path}/test_temp_json/JMdictEntries.json`);
-      objectToJson(jmdict.getKanjiArray(), `${path}/test_temp_json/KanjiArray.json`);
-      objectToJson(jmdict.getKanjiIndex(), `${path}/test_temp_json/KanjiIndex.json`);
-      objectToJson(jmdict.getReadingArray(), `${path}/test_temp_json/ReadingArray.json`);
-      objectToJson(jmdict.getReadingIndex(), `${path}/test_temp_json/ReadingIndex.json`);
-
-      assert.deepStrictEqual(fs.existsSync(`${path}/test_temp_json/JMdictEntries.json`), true);
-      assert.deepStrictEqual(fs.existsSync(`${path}/test_temp_json/KanjiArray.json`), true);
-      assert.deepStrictEqual(fs.existsSync(`${path}/test_temp_json/KanjiIndex.json`), true);
-      assert.deepStrictEqual(fs.existsSync(`${path}/test_temp_json/ReadingArray.json`), true);
-      assert.deepStrictEqual(fs.existsSync(`${path}/test_temp_json/ReadingIndex.json`), true);
-    });
-  });
-
-  function jsonValidityCheck(/** @type {string} */ jsonFolder) {
+  const jsonValidityCheck = (/** @type {string} */ jsonFolder) => {
     it('should export JMdictEntries.json correctly', function () {
       const JMdictEntries = JSON.parse(fs.readFileSync(`${jsonFolder}/JMdictEntries.json`, 'utf8'));
       assert.deepStrictEqual(Array.isArray(JMdictEntries), true);
@@ -130,7 +100,7 @@ describe('Testing jmdict-util', function () {
       });
     });
 
-    it('should export ReadingArray.json correctly', function () {
+    it('should export ReadingIndex.json correctly', function () {
       const ReadingIndex = JSON.parse(fs.readFileSync(`${jsonFolder}/ReadingIndex.json`, 'utf8'));
       assert.deepStrictEqual(ReadingIndex === Object(ReadingIndex), true);
 
@@ -143,18 +113,61 @@ describe('Testing jmdict-util', function () {
         assert.deepStrictEqual(ReadingIndex[kanjiSample], undefined);
       });
     });
-  }
+  };
 
+  describe('JSON exporting features', function () {
+    before('creating json folder', function () {
+      if (fs.existsSync(`${path}/test_temp/json`)) {
+        throw new Error('./test_temp/json folder exists, please delete and rerun the test.');
+      } else {
+        fs.mkdirSync(`${path}/test_temp/json`);
+      }
+    });
 
-  describe('JSON files validity', function () {
-    jsonValidityCheck(`${path}/test_temp_json`);
+    it('exports JSON files', function () {
+      this.slow(60000);
+      this.timeout(300000);
+
+      const jmdict = new JMdictUtil(`${path}/test/fixtures/JMdict_e_test`);
+
+      objectToJson(jmdict.getJMdictEntries(), `${path}/test_temp/json/JMdictEntries.json`);
+      objectToJson(jmdict.getEntityDefinitions(), `${path}/test_temp/json/EntityDefinitions.json`);
+      objectToJson(jmdict.getKanjiArray(), `${path}/test_temp/json/KanjiArray.json`);
+      objectToJson(jmdict.getKanjiIndex(), `${path}/test_temp/json/KanjiIndex.json`);
+      objectToJson(jmdict.getReadingArray(), `${path}/test_temp/json/ReadingArray.json`);
+      objectToJson(jmdict.getReadingIndex(), `${path}/test_temp/json/ReadingIndex.json`);
+
+      assert.deepStrictEqual(fs.existsSync(`${path}/test_temp/json/JMdictEntries.json`), true);
+      assert.deepStrictEqual(fs.existsSync(`${path}/test_temp/json/EntityDefinitions.json`), true);
+      assert.deepStrictEqual(fs.existsSync(`${path}/test_temp/json/KanjiArray.json`), true);
+      assert.deepStrictEqual(fs.existsSync(`${path}/test_temp/json/KanjiIndex.json`), true);
+      assert.deepStrictEqual(fs.existsSync(`${path}/test_temp/json/ReadingArray.json`), true);
+      assert.deepStrictEqual(fs.existsSync(`${path}/test_temp/json/ReadingIndex.json`), true);
+    });
+
+    jsonValidityCheck(`${path}/test_temp/json`);
   });
 
-  describe('JSON files validity (from cli)', function () {
-    jsonValidityCheck(`${path}/test_temp_cli_json`);
+  describe('JSON exporting features (from CLI)', function () {
+    before('creating cli_json folder', function () {
+      if (fs.existsSync(`${path}/test_temp/cli_json`)) {
+        throw new Error('./test_temp/cli_json folder exists, please delete and rerun the test.');
+      } else {
+        fs.mkdirSync(`${path}/test_temp/cli_json`);
+      }
+    });
+
+    it('exports JSON files', function () {
+      this.slow(60000);
+      this.timeout(300000);
+
+      execSync('npx . json ./test/fixtures/JMdict_e_test -d ./test_temp/cli_json');
+    });
+
+    jsonValidityCheck(`${path}/test_temp/cli_json`);
   });
 
   after(function () {
-    console.log('(Please delete all ./test_temp_* folders.)');
+    console.log('(Please delete ./test_temp folder.)');
   });
 });

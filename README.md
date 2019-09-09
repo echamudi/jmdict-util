@@ -18,7 +18,7 @@ Export JMdict into JSON various files and SQLite.
 
     ```sh
     npm install jmdict-util
-    npx jmdict-util toJSON ./JMdict_e ./dist
+    npx jmdict-util json ./JMdict_e -d ./dist
     ```
 
 1. Your JSON files are ready!
@@ -35,7 +35,6 @@ Export JMdict into JSON various files and SQLite.
 ## Testing
 
 ```sh
-npx . toJSON ./test/fixtures/JMdict_e_test ./test_temp_cli_json
 npm test
 ```
 
