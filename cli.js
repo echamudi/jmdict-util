@@ -47,6 +47,7 @@ const jmdict = new JMdictUtil(source);
 // Exporting JSON
 if (mode === 'toJSON') {
   objectToJson(jmdict.getJMdictEntries(), `${destination}/JMdictEntries.json`);
+  objectToJson(jmdict.getEntityDefinitions(), `${destination}/EntityDefinitions.json`);
   objectToJson(jmdict.getKanjiArray(), `${destination}/KanjiArray.json`);
   objectToJson(jmdict.getKanjiIndex(), `${destination}/KanjiIndex.json`);
   objectToJson(jmdict.getReadingArray(), `${destination}/ReadingArray.json`);

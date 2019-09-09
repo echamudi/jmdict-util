@@ -34,6 +34,7 @@ describe('Testing jmdict-util', function () {
 
     it('has all required methods', function () {
       assert.deepStrictEqual(typeof JMdictUtil.prototype.getJMdictEntries, 'function');
+      assert.deepStrictEqual(typeof JMdictUtil.prototype.getEntityDefinitions, 'function');
       assert.deepStrictEqual(typeof JMdictUtil.prototype.getKanjiIndex, 'function');
       assert.deepStrictEqual(typeof JMdictUtil.prototype.getKanjiArray, 'function');
       assert.deepStrictEqual(typeof JMdictUtil.prototype.getReadingIndex, 'function');
@@ -130,12 +131,14 @@ describe('Testing jmdict-util', function () {
       const jmdict = new JMdictUtil(`${path}/test/fixtures/JMdict_e_test`);
 
       objectToJson(jmdict.getJMdictEntries(), `${path}/test_temp/json/JMdictEntries.json`);
+      objectToJson(jmdict.getEntityDefinitions(), `${path}/test_temp/json/EntityDefinitions.json`);
       objectToJson(jmdict.getKanjiArray(), `${path}/test_temp/json/KanjiArray.json`);
       objectToJson(jmdict.getKanjiIndex(), `${path}/test_temp/json/KanjiIndex.json`);
       objectToJson(jmdict.getReadingArray(), `${path}/test_temp/json/ReadingArray.json`);
       objectToJson(jmdict.getReadingIndex(), `${path}/test_temp/json/ReadingIndex.json`);
 
       assert.deepStrictEqual(fs.existsSync(`${path}/test_temp/json/JMdictEntries.json`), true);
+      assert.deepStrictEqual(fs.existsSync(`${path}/test_temp/json/EntityDefinitions.json`), true);
       assert.deepStrictEqual(fs.existsSync(`${path}/test_temp/json/KanjiArray.json`), true);
       assert.deepStrictEqual(fs.existsSync(`${path}/test_temp/json/KanjiIndex.json`), true);
       assert.deepStrictEqual(fs.existsSync(`${path}/test_temp/json/ReadingArray.json`), true);
