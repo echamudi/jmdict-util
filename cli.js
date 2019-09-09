@@ -13,7 +13,7 @@ program
   .command('json <source>')
   .alias('toJSON')
   .description('Export to packs of json')
-  .option('-d, --destination [destination]', 'Destination folder', './')
+  .option('-d, --destination [destination]', 'Destination folder')
 
   .action((source, args) => {
     jmdict = new JMdictUtil(source);
