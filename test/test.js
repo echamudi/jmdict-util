@@ -161,7 +161,7 @@ describe('Testing jmdict-util', function () {
       this.slow(60000);
       this.timeout(300000);
 
-      execSync('npx . toJSON ./test/fixtures/JMdict_e_test ./test_temp/cli_json');
+      execSync('npx . json ./test/fixtures/JMdict_e_test -d ./test_temp/cli_json');
     });
 
     jsonValidityCheck(`${path}/test_temp/cli_json`);
