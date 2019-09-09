@@ -8,7 +8,6 @@
         "lib/**/*.js",
         "test/**/*.js",
         "types/**/*.ts",
-        "cli.js",
         "index.js"
     ],
 }
