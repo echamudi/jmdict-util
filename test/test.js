@@ -1,4 +1,3 @@
-/* eslint-env node, mocha */
 /* eslint-disable func-names */
 /* eslint-disable prefer-arrow-callback */
 
@@ -10,23 +9,21 @@ const fs = require('fs');
 const console = require('console');
 const assert = require('assert');
 const { execSync } = require('child_process');
+
 const {
   JMdictUtil,
   objectToJson,
 } = require('../index');
+
 const {
   testApiJMdictUtil,
   testApiObjectToJson,
 } = require('./test-api.js');
 
+const kanjiSamples = JSON.parse(fs.readFileSync(`${path}/test/fixtures/kanjiSamples.json`, 'utf8'));
+const readingSamples = JSON.parse(fs.readFileSync(`${path}/test/fixtures/readingSamples.json`, 'utf8'));
+
 if (!fs.existsSync(`${path}/test_temp`)) fs.mkdirSync(`${path}/test_temp`);
-
-// Fixtures
-
-const kanjiSamples = ['食べる', '高等学校', '果物', '飛行機', '今日', '東京', '根本', '根元'];
-Object.freeze(kanjiSamples);
-const readingSamples = ['たべる', 'こうとうがっこう', 'くだもの', 'ひこうき', 'きょう', 'とうきょう', 'こんぽん', 'こんげん', 'ねもと', 'じゃあ'];
-Object.freeze(readingSamples);
 
 // Test Suites
 
