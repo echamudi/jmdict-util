@@ -14,6 +14,10 @@ const {
   JMdictUtil,
   objectToJson,
 } = require('../index');
+const {
+  testApiJMdictUtil,
+  testApiObjectToJson,
+} = require('./test-api.js');
 
 if (!fs.existsSync(`${path}/test_temp`)) fs.mkdirSync(`${path}/test_temp`);
 
@@ -27,26 +31,8 @@ Object.freeze(readingSamples);
 // Test Suites
 
 describe('Testing jmdict-util', function () {
-  describe('JMdictUtil API', function () {
-    it('has JMdictUtil function', function () {
-      assert.deepStrictEqual(typeof JMdictUtil, 'function');
-    });
-
-    it('has all required methods', function () {
-      assert.deepStrictEqual(typeof JMdictUtil.prototype.getJMdictEntries, 'function');
-      assert.deepStrictEqual(typeof JMdictUtil.prototype.getEntityDefinitions, 'function');
-      assert.deepStrictEqual(typeof JMdictUtil.prototype.getKanjiIndex, 'function');
-      assert.deepStrictEqual(typeof JMdictUtil.prototype.getKanjiArray, 'function');
-      assert.deepStrictEqual(typeof JMdictUtil.prototype.getReadingIndex, 'function');
-      assert.deepStrictEqual(typeof JMdictUtil.prototype.getReadingArray, 'function');
-    });
-  });
-
-  describe('objectToJson API', function () {
-    it('has objectToJson function', function () {
-      assert.deepStrictEqual(typeof objectToJson, 'function');
-    });
-  });
+  describe('JMdictUtil API', testApiJMdictUtil);
+  describe('objectToJson API', testApiObjectToJson);
 
   const jsonValidityCheck = (/** @type {string} */ jsonFolder) => {
     it('should export JMdictEntries.json correctly', function () {
