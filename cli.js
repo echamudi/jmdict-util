@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const program = require('commander');
+const console = require('console');
 const {
   JMdictUtil,
   objectToJson,
@@ -26,6 +27,8 @@ program
     objectToJson(jmdict.getKanjiIndex(), `${args.destination}/KanjiIndex.json`);
     objectToJson(jmdict.getReadingArray(), `${args.destination}/ReadingArray.json`);
     objectToJson(jmdict.getReadingIndex(), `${args.destination}/ReadingIndex.json`);
+
+    console.log('Completed!');
   });
 
 program
@@ -33,12 +36,14 @@ program
   .alias('toSQLite')
   .description('Export JMdict XML to SQLite database.')
   .option('-d, --destination <destination>', 'Destination folder')
-  .action((source, args) => {
+  .action(async (source, args) => {
     jmdict = new JMdictUtil(source);
 
     if (!fs.existsSync(args.destination)) fs.mkdirSync(args.destination, { recursive: true });
 
-    jmdict.buildSqlite(`${args.destination}/jmdict.db`);
+    await jmdict.buildSqlite(`${args.destination}/jmdict.db`);
+
+    console.log('Completed!');
   });
 
 program.parse(process.argv);
