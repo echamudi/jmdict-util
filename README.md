@@ -4,8 +4,6 @@
 
 Export JMdict into JSON various files and SQLite.
 
-(The SQLite exporting feature is currently under development and not available)
-
 ## Usage
 
 1. Download [JMdict_e.gz](http://www.edrdg.org/jmdict/edict_doc.html).
@@ -14,14 +12,17 @@ Export JMdict into JSON various files and SQLite.
 
 1. Open that folder in terminal.
 
-1. Run following command
+1. Run following commands
 
     ```sh
     npm install -g jmdict-util
-    jmdict-util json ./JMdict_e -d ./dist
-    ```
 
-1. Your JSON files are ready!
+    # For exporting to JSON files
+    jmdict-util json ./JMdict_e -d ./dist
+
+    # For exporting to SQLite file
+    jmdict-util sqlite ./JMdict_e -d ./dist
+    ```
 
 ## Development
 
