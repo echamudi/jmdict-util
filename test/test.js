@@ -22,6 +22,10 @@ const {
   testJsonValidity,
 } = require('./test-json-validity.js');
 
+const {
+  testSqliteExport,
+} = require('./test-db.js');
+
 if (!fs.existsSync(`${path}/test_temp`)) fs.mkdirSync(`${path}/test_temp`);
 
 // Test Suites
@@ -40,6 +44,8 @@ describe('Testing jmdict-util', function () {
   describe('JSON validity (from CLI)', function () {
     testJsonValidity(`${path}/test_temp/cli_json`);
   });
+
+  describe('SQLite exporting features (CLI)', testSqliteExport);
 
   after(function () {
     console.log('(Please delete ./test_temp folder.)');
