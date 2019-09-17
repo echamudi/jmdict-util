@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const program = require('commander');
+const console = require('console');
 const {
   JMdictUtil,
   objectToJson,
@@ -12,23 +13,13 @@ let jmdict = null;
 program
   .command('json <source>')
   .alias('toJSON')
-  .description('Export to packs of json')
-  .option('-d, --destination [destination]', 'Destination folder')
+  .description('Export JMdict XML to various json files.')
+  .option('-d, --destination <destination>', 'Destination folder')
 
   .action((source, args) => {
     jmdict = new JMdictUtil(source);
 
-    if (args.destination === undefined) {
-      console.error('Please set destination folder');
-      process.exit(1);
-    }
-
-    if (fs.existsSync(args.destination) && !fs.lstatSync(args.destination).isDirectory()) {
-      console.error('Destination is not a directory.');
-      process.exit(1);
-    }
-
-    if (!fs.existsSync(args.destination)) fs.mkdirSync(args.destination);
+    if (!fs.existsSync(args.destination)) fs.mkdirSync(args.destination, { recursive: true });
 
     objectToJson(jmdict.getJMdictEntries(), `${args.destination}/JMdictEntries.json`);
     objectToJson(jmdict.getEntityDefinitions(), `${args.destination}/EntityDefinitions.json`);
@@ -36,6 +27,23 @@ program
     objectToJson(jmdict.getKanjiIndex(), `${args.destination}/KanjiIndex.json`);
     objectToJson(jmdict.getReadingArray(), `${args.destination}/ReadingArray.json`);
     objectToJson(jmdict.getReadingIndex(), `${args.destination}/ReadingIndex.json`);
+
+    console.log('Completed!');
+  });
+
+program
+  .command('sqlite <source>')
+  .alias('toSQLite')
+  .description('Export JMdict XML to SQLite database.')
+  .option('-d, --destination <destination>', 'Destination folder')
+  .action(async (source, args) => {
+    jmdict = new JMdictUtil(source);
+
+    if (!fs.existsSync(args.destination)) fs.mkdirSync(args.destination, { recursive: true });
+
+    await jmdict.buildSqlite(`${args.destination}/jmdict.db`);
+
+    console.log('Completed!');
   });
 
 program.parse(process.argv);
