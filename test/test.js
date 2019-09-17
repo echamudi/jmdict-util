@@ -41,7 +41,7 @@ describe('Testing jmdict-util', function () {
 
 
   describe('JSON exporting features (CLI)', testJsonExportCLI);
-  describe('JSON validity (from CLI)', function () {
+  describe('JSON validity (CLI)', function () {
     testJsonValidity(`${path}/test_temp/cli_json`);
   });
 
