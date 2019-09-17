@@ -1,6 +1,8 @@
 /* eslint-disable func-names */
 /* eslint-disable prefer-arrow-callback */
 
+'strict mode';
+
 const path = process.cwd();
 
 const fs = require('fs');

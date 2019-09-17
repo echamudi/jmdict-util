@@ -7,13 +7,6 @@ const path = process.cwd();
 
 const fs = require('fs');
 const console = require('console');
-const assert = require('assert');
-const { execSync } = require('child_process');
-
-const {
-  JMdictUtil,
-  objectToJson,
-} = require('../index');
 
 const {
   testApiJMdictUtil,
@@ -22,6 +15,7 @@ const {
 
 const {
   testJsonExport,
+  testJsonExportCLI,
 } = require('./test-json-export.js');
 
 const {
@@ -37,27 +31,13 @@ describe('Testing jmdict-util', function () {
   describe('objectToJson API', testApiObjectToJson);
 
   describe('JSON exporting features', testJsonExport);
-
   describe('JSON validity', function () {
     testJsonValidity(`${path}/test_temp/json`);
   });
 
+
+  describe('JSON exporting features (CLI)', testJsonExportCLI);
   describe('JSON exporting features (from CLI)', function () {
-    before('creating cli_json folder', function () {
-      if (fs.existsSync(`${path}/test_temp/cli_json`)) {
-        throw new Error('./test_temp/cli_json folder exists, please delete and rerun the test.');
-      } else {
-        fs.mkdirSync(`${path}/test_temp/cli_json`);
-      }
-    });
-
-    it('exports JSON files', function () {
-      this.slow(60000);
-      this.timeout(300000);
-
-      execSync('jmdict-util json ./test/fixtures/JMdict_e_test -d ./test_temp/cli_json');
-    });
-
     testJsonValidity(`${path}/test_temp/cli_json`);
   });
 

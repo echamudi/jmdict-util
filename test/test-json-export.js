@@ -1,10 +1,13 @@
 /* eslint-disable func-names */
 /* eslint-disable prefer-arrow-callback */
 
+'strict mode';
+
 const path = process.cwd();
 
 const fs = require('fs');
 const assert = require('assert');
+const { execSync } = require('child_process');
 
 const {
   JMdictUtil,
@@ -39,5 +42,22 @@ module.exports.testJsonExport = function () {
     assert.deepStrictEqual(fs.existsSync(`${path}/test_temp/json/KanjiIndex.json`), true);
     assert.deepStrictEqual(fs.existsSync(`${path}/test_temp/json/ReadingArray.json`), true);
     assert.deepStrictEqual(fs.existsSync(`${path}/test_temp/json/ReadingIndex.json`), true);
+  });
+};
+
+module.exports.testJsonExportCLI = function () {
+  before('creating cli_json folder', function () {
+    if (fs.existsSync(`${path}/test_temp/cli_json`)) {
+      throw new Error('./test_temp/cli_json folder exists, please delete and rerun the test.');
+    } else {
+      fs.mkdirSync(`${path}/test_temp/cli_json`);
+    }
+  });
+
+  it('exports JSON files', function () {
+    this.slow(60000);
+    this.timeout(300000);
+
+    execSync('jmdict-util json ./test/fixtures/JMdict_e_test -d ./test_temp/cli_json');
   });
 };

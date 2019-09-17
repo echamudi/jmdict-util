@@ -1,6 +1,8 @@
 /* eslint-disable func-names */
 /* eslint-disable prefer-arrow-callback */
 
+'strict mode';
+
 // npx mocha ./test/test-db.js
 
 const path = process.cwd();
