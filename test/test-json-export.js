@@ -59,5 +59,12 @@ module.exports.testJsonExportCLI = function () {
     this.timeout(300000);
 
     execSync('jmdict-util json ./test/fixtures/JMdict_e_test -d ./test_temp/cli_json');
+
+    assert.deepStrictEqual(fs.existsSync(`${path}/test_temp/cli_json/JMdictEntries.json`), true);
+    assert.deepStrictEqual(fs.existsSync(`${path}/test_temp/cli_json/EntityDefinitions.json`), true);
+    assert.deepStrictEqual(fs.existsSync(`${path}/test_temp/cli_json/KanjiArray.json`), true);
+    assert.deepStrictEqual(fs.existsSync(`${path}/test_temp/cli_json/KanjiIndex.json`), true);
+    assert.deepStrictEqual(fs.existsSync(`${path}/test_temp/cli_json/ReadingArray.json`), true);
+    assert.deepStrictEqual(fs.existsSync(`${path}/test_temp/cli_json/ReadingIndex.json`), true);
   });
 };
