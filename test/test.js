@@ -24,7 +24,7 @@ const {
 
 const {
   testSqliteExport,
-} = require('./test-db.js');
+} = require('./test-sqlite.js');
 
 if (!fs.existsSync(`${path}/test_temp`)) fs.mkdirSync(`${path}/test_temp`);
 
