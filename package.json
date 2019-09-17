@@ -1,6 +1,6 @@
 {
   "name": "jmdict-util",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Export JMdict to JSON and SQLite.",
   "main": "index.js",
   "scripts": {
