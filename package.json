@@ -1,7 +1,7 @@
 {
   "name": "jmdict-util",
-  "version": "0.6.1",
-  "description": "Export JMdict to JSON and SQLite.",
+  "version": "0.7.0",
+  "description": "Parse JMdict XML file and export to SQLite and JSON files.",
   "main": "index.js",
   "scripts": {
     "test": "mocha ./test/test.js"
@@ -10,6 +10,12 @@
     "type": "git",
     "url": "git://github.com/ezhmd/jmdict-util.git"
   },
+  "keywords": [
+    "japanese",
+    "jmdict",
+    "sqlite",
+    "json"
+  ],
   "bin": "cli.js",
   "author": "Ezzat Chamudi",
   "license": "MIT",
