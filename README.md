@@ -2,13 +2,13 @@
 
 [![Build Status](https://travis-ci.org/ezhmd/jmdict-util.svg?branch=master)](https://travis-ci.org/ezhmd/jmdict-util) [![NPM Downloads](https://img.shields.io/npm/dm/jmdict-util?label=downloads)](https://www.npmjs.com/package/jmdict-util)
 
-Export JMdict into various JSON files and SQLite.
+Parse JMdict XML file and export to SQLite and JSON files.
 
 ## Usage
 
-1. Download [JMdict_e.gz](http://www.edrdg.org/jmdict/edict_doc.html).
+1. Download `JMdict_e.gz` from [the website](http://www.edrdg.org/jmdict/edict_doc.html).
 
-1. Extract the `.gz`, move the `JMdict_e` file in an empty folder.
+1. Extract the `.gz` file, move the `JMdict_e` file in an empty folder.
 
 1. Open that folder in terminal.
 
@@ -24,20 +24,12 @@ Export JMdict into various JSON files and SQLite.
     jmdict-util sqlite ./JMdict_e -d ./dist
     ```
 
-## Development
-
 ## Build Status
 
 | Branch | Status |
 | - | - |
 | master | [![Build Status](https://travis-ci.org/ezhmd/jmdict-util.svg?branch=master)](https://travis-ci.org/ezhmd/jmdict-util) |
 | develop | [![Build Status](https://travis-ci.org/ezhmd/jmdict-util.svg?branch=develop)](https://travis-ci.org/ezhmd/jmdict-util) |
-
-## Testing
-
-```sh
-npm test
-```
 
 ## Authors
 
