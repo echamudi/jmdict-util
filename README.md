@@ -4,6 +4,8 @@
 
 Parse JMdict XML file and export to SQLite and JSON files.
 
+> The SQLite exporting feature is functional but deprecated and won't be updated. Please check the newer [Japanese DB Maker](https://github.com/ezhmd/japanese-db-maker) project for better features.
+
 ## Usage
 
 1. Download `JMdict_e.gz` from [the website](http://www.edrdg.org/jmdict/edict_doc.html).
