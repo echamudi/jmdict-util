@@ -33,14 +33,20 @@ Parse JMdict XML file and export to SQLite and JSON files.
 | master | [![Build Status](https://travis-ci.org/ezhmd/jmdict-util.svg?branch=master)](https://travis-ci.org/ezhmd/jmdict-util) |
 | develop | [![Build Status](https://travis-ci.org/ezhmd/jmdict-util.svg?branch=develop)](https://travis-ci.org/ezhmd/jmdict-util) |
 
+## Acknowledgement
+
+- JMdict https://www.edrdg.org/jmdict/j_jmdict.html
+
 ## Authors
 
 * **Ezzat Chamudi** - [ezhmd](https://github.com/ezhmd)
 
-## Licenses
+See also the list of [contributors](https://github.com/ezhmd/jmdict-util/graphs/contributors) who participated in this project.
 
-JMdict Util code is released under [MIT](https://opensource.org/licenses/MIT). 
+## License
 
-JMdict is available under Creative Commons Attribution-ShareAlike Licence (V3.0). [License Details](http://www.edrdg.org/edrdg/licence.html)
+Code and documentation copyright 2019 the [JMdict Util Project Authors](https://github.com/ezhmd/jmdict-util/graphs/contributors). 
+
+JMdict Util code is licensed under [MPL-2.0](https://www.mozilla.org/en-US/MPL/2.0/). Images, logos, docs, and articles in this JMdict Util project are released under [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode).
 
 Libraries, dependencies, and tools used in this project are tied with their own licenses respectively.
