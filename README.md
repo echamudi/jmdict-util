@@ -4,7 +4,7 @@
 
 Parse JMdict XML file and export to SQLite and JSON files.
 
-> The SQLite exporting feature is functional but deprecated and won't be updated. Please check the newer [Japanese DB Maker](https://github.com/ezhmd/japanese-db-maker) project for better features.
+> **⚠️ Deprecation:** The SQLite exporting feature is functional but deprecated and won't be updated. Please check the newer [Japanese DB Maker](https://github.com/ezhmd/japanese-db-maker) project for better database exporting features.
 
 ## Usage
 
