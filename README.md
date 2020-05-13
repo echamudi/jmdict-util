@@ -8,7 +8,7 @@ npm URL : https://www.npmjs.com/package/japanese-db
 
 -----
 
-# JMdict Util
+## JMdict Util
 
 [![Build Status](https://travis-ci.org/ezhmd/jmdict-util.svg?branch=master)](https://travis-ci.org/ezhmd/jmdict-util) [![NPM Downloads](https://img.shields.io/npm/dm/jmdict-util?label=downloads)](https://www.npmjs.com/package/jmdict-util)
 
