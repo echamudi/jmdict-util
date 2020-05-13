@@ -1,4 +1,4 @@
-## ⚠️ This project has been deprecated
+**⚠️ This project has been deprecated**
 
 The SQLite exporting feature in this project is functional but deprecated and won't be developed further. Please check the newer [Japanese DB](https://github.com/ezhmd/japanese-db) project for better database exporting features.
 
@@ -7,8 +7,9 @@ GitHub URL : https://github.com/ezhmd/japanese-db
 npm URL : https://www.npmjs.com/package/japanese-db
 
 -----
+<br>
 
-## JMdict Util
+# JMdict Util
 
 [![Build Status](https://travis-ci.org/ezhmd/jmdict-util.svg?branch=master)](https://travis-ci.org/ezhmd/jmdict-util) [![NPM Downloads](https://img.shields.io/npm/dm/jmdict-util?label=downloads)](https://www.npmjs.com/package/jmdict-util)
 
