@@ -54,8 +54,8 @@ See also the list of [contributors](https://github.com/ezhmd/jmdict-util/graphs/
 
 ## License
 
-Code and documentation copyright 2019 the [JMdict Util Project Authors](https://github.com/ezhmd/jmdict-util/graphs/contributors). 
+Copyright © 2019 Ezzat Chamudi.
 
-JMdict Util code is licensed under [MPL-2.0](https://www.mozilla.org/en-US/MPL/2.0/). Images, logos, docs, and articles in this JMdict Util project are released under [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode).
+JMdict Util code is licensed under [MPL-2.0](https://www.mozilla.org/en-US/MPL/2.0/). Images, logos, docs, and articles in this project are released under [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode).
 
 Libraries, dependencies, and tools used in this project are tied with their own licenses respectively.
