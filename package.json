@@ -1,6 +1,6 @@
 {
   "name": "jmdict-util",
-  "version": "0.7.5",
+  "version": "0.7.6",
   "description": "Parse JMdict XML file and export to SQLite and JSON files.",
   "main": "index.js",
   "scripts": {
