@@ -1,6 +1,6 @@
 {
   "name": "jmdict-util",
-  "version": "0.7.6",
+  "version": "0.7.7",
   "description": "Parse JMdict XML file and export to SQLite and JSON files.",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/ezhmd/jmdict-util.git"
+    "url": "git://github.com/echamudi/jmdict-util.git"
   },
   "keywords": [
     "japanese",
