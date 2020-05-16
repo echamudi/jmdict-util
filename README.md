@@ -1,8 +1,8 @@
 **⚠️ This project has been deprecated**
 
-The SQLite exporting feature in this project is functional but deprecated and won't be developed further. Please check the newer [Japanese DB](https://github.com/ezhmd/japanese-db) project for better database exporting features.
+The SQLite exporting feature in this project is functional but deprecated and won't be developed further. Please check the newer [Japanese DB](https://github.com/echamudi/japanese-db) project for better database exporting features.
 
-GitHub URL : https://github.com/ezhmd/japanese-db
+GitHub URL : https://github.com/echamudi/japanese-db
 
 npm URL : https://www.npmjs.com/package/japanese-db
 
@@ -11,7 +11,7 @@ npm URL : https://www.npmjs.com/package/japanese-db
 
 # JMdict Util
 
-[![Build Status](https://travis-ci.org/ezhmd/jmdict-util.svg?branch=master)](https://travis-ci.org/ezhmd/jmdict-util) [![NPM Downloads](https://img.shields.io/npm/dm/jmdict-util?label=downloads)](https://www.npmjs.com/package/jmdict-util)
+[![Build Status](https://travis-ci.org/echamudi/jmdict-util.svg?branch=master)](https://travis-ci.org/echamudi/jmdict-util) [![NPM Downloads](https://img.shields.io/npm/dm/jmdict-util?label=downloads)](https://www.npmjs.com/package/jmdict-util)
 
 Parse JMdict XML file and export to SQLite and JSON files.
 
@@ -39,8 +39,8 @@ Parse JMdict XML file and export to SQLite and JSON files.
 
 | Branch | Status |
 | - | - |
-| master | [![Build Status](https://travis-ci.org/ezhmd/jmdict-util.svg?branch=master)](https://travis-ci.org/ezhmd/jmdict-util) |
-| develop | [![Build Status](https://travis-ci.org/ezhmd/jmdict-util.svg?branch=develop)](https://travis-ci.org/ezhmd/jmdict-util) |
+| master | [![Build Status](https://travis-ci.org/echamudi/jmdict-util.svg?branch=master)](https://travis-ci.org/echamudi/jmdict-util) |
+| develop | [![Build Status](https://travis-ci.org/echamudi/jmdict-util.svg?branch=develop)](https://travis-ci.org/echamudi/jmdict-util) |
 
 ## Acknowledgement
 
@@ -48,9 +48,9 @@ Parse JMdict XML file and export to SQLite and JSON files.
 
 ## Authors
 
-* **Ezzat Chamudi** - [ezhmd](https://github.com/ezhmd)
+* **Ezzat Chamudi** - [echamudi](https://github.com/echamudi)
 
-See also the list of [contributors](https://github.com/ezhmd/jmdict-util/graphs/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/echamudi/jmdict-util/graphs/contributors) who participated in this project.
 
 ## License
 
