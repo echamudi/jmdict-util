@@ -1,6 +1,6 @@
 // Type definitions for JMdict
 // Project: jmdict-util
-// Definitions by: Ezzat Chamudi <https://github.com/ezhmd>
+// Definitions by: Ezzat Chamudi <https://github.com/echamudi>
 // Descriptions are taken from https://www.edrdg.org/jmdict/edict_doc.html
 
 declare namespace JMdict {
