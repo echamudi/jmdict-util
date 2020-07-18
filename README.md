@@ -1,10 +1,16 @@
 **⚠️ This project has been deprecated**
 
-The SQLite exporting feature in this project is functional but deprecated and won't be developed further. Please check the newer [Japanese DB](https://github.com/echamudi/japanese-db) project for better database exporting features.
+<p align="center">
+  <a href="https://www.npmjs.com/package/japanese-db">
+    <img src="https://raw.githubusercontent.com/echamudi/echamudi-docs/master/images/truck-git.svg" width="150" height="200">
+  </a>
+</p>
 
-GitHub URL : https://github.com/echamudi/japanese-db
+The SQLite exporting feature in this project is functional but deprecated and won't be developed further. Please check the newer [Japanese DB](https://www.npmjs.com/package/japanese-db) project for better database exporting features.
 
-npm URL : https://www.npmjs.com/package/japanese-db
+**NPM URL:** https://www.npmjs.com/package/japanese-db
+
+**GitHub URL:** https://github.com/echamudi/japanese-toolkit/tree/master/packages/japanese-db
 
 -----
 <br>
